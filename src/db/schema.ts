@@ -21,4 +21,18 @@ const advocates = pgTable("advocates", {
   createdAt: timestamp("created_at").default(sql`CURRENT_TIMESTAMP`),
 });
 
+interface Advocate {
+  id: string;
+  firstName: string;
+  lastName: string;
+  city: string;
+  degree: string;
+  specialties: Array<string>;
+  yearsOfExperience: number;
+  phoneNumber: number;
+  createdAt: string;
+}
+
 export { advocates };
+
+export type {Advocate};
