@@ -1,5 +1,6 @@
+import { recordTraceEvents } from "next/dist/trace";
 import db from "..";
-import { advocates } from "../schema";
+import { Advocate, advocates } from "../schema";
 
 const specialties = [
   "Bipolar",
